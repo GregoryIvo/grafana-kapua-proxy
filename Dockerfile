@@ -11,7 +11,7 @@ ADD ./start.sh /app
 USER root
 
 # Install node.js and node package manager
-RUN apt-get update && apt-get -y install gnupg && curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get -y install nodejs
+RUN apk update && apk add gnupg nodejs npm
 
 # Install Node dependencies for app
 RUN npm install
