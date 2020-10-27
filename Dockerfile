@@ -13,6 +13,9 @@ USER root
 # Install node.js and node package manager
 RUN apk update && apk add gnupg nodejs npm
 
+#Install Bash so that start script may be run
+RUN apk add --no-cache --upgrade bash
+
 # Install Node dependencies for app
 RUN npm install
 
